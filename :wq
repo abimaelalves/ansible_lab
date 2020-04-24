@@ -3,7 +3,3 @@
 
 [servidores_bd]
 192.168.8.47
-
-[servidores:children]
-servidores_web
-servidores_bd

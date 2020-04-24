@@ -1,1 +1,10 @@
-Alguns comandos Ad-hoc do ansible
+Alguns comandos Ad-hoc do ansible !
+
+Alguns parametros:
+-i invetario (hosts)
+-m modulo -a "argumento para o modulo"
+-u usuario
+-k senho do usuario
+-K senha de SUDO
+-b executar como super usuario
+-v verbose

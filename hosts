@@ -2,7 +2,7 @@
 192.168.8.44
 
 [servidores_bd]
-192.168.8.47
+mysql ansible_ssh_host=192.168.8.47 ansible_ssh_user=root ansible_ssh_pass=root ansible_become=yes ansible_become_method=sudo ansible_become_user=root ansible_become_pass=root ansible_shell_executable=/bin/bash
 
 [servidores:children]
 servidores_web

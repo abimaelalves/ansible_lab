@@ -8,3 +8,9 @@ Alguns parametros:
 -K senha de SUDO
 -b executar como super usuario
 -v verbose
+
+Alguns exemplos: 
+Dentro da pasta do seu projeto, executar:
+ansible ip_ou_grupo -i hosts -u root -k -K- -b -m ping                     # executando modulo ping
+ansible ip_ou_grupo -i hosts -u root -k -K- -b -a "whoami; ifconfig;"      # executando modulo com argumento desejado
+ansible ip_ou_grupo -i hosts -u root -k -m setup                           # executando modulo setup

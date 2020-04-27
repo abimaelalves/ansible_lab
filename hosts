@@ -1,18 +1,10 @@
 [servidores_web]
-www ansible_ssh_host=192.168.8.44
+www ansible_ssh_host=192.168.1.153
 
 [servidores_bd]
-mysql ansible_ssh_host=192.168.8.47
+mysql ansible_ssh_host=192.168.1.186
 
 [servidores:children]
 servidores_web
 servidores_bd
 
-[servidores_bd:vars]
-ansible_ssh_user=root 
-ansible_ssh_pass=root
-ansible_become=yes 
-ansible_become_method=sudo
-ansible_become_user=root 
-ansible_become_pass=root 
-ansible_shell_executable=/bin/bash     

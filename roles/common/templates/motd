@@ -1,8 +1,7 @@
------------------------------------
-	Bem vindo!
+==============================================================================
+		    Servidor Web
 
-EnderecoIP="ansible_all_ipv4_addresses"
-
-SISTEMA="ansible_distribution"
-"ansible_distribution_major_version"
-"ansible_os_family"
+HOSTNAME.: "{{ ansible_fqdn }}"
+ENDERECOIP.: "{{ ansible_all_ipv4_addresses }}"
+DIST.: "{{ ansible_distribution }}" - "{{ ansible_distribution_version }}"
+==============================================================================

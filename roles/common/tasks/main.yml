@@ -1,14 +1,14 @@
 ---
-# Gerenciamento de pacotes e atualização do sistema operacionao
+# Gerenciamento de pacotes e atualizacao do SO
 - name: Atualizacao do Sistema Operacional
   yum: name=* state=latest update_cache=yes
 
 - name: Instalacao de pacotes
   yum:
-    name: "{{ packages }}"    # variavel
+    name: "{{ packages }}"    # Definindo uma Variavel
     state: latest
   vars:
-    packages:                 # chamando a variavel packages definida em cima
+    packages:                 # Chamando a variavel definida acima
       - net-tools
       - vim
 
@@ -16,4 +16,7 @@
 - name: Configurando timezone
   file: src=/usr/share/zoneinfo/America/Sao_Paulo dest=/etc/localtime state=link force=yes
 
+# Copia de arquivos do ansible master para algum host de destino
+- name: Copiando arquivo de backup
+  copy: src=etc.zip dest=/tmp/etc.zip           # Esse modulo de cópia automaticamente ele busca dentro do diretorio files e envia uma copia do arquivo para host
 ...

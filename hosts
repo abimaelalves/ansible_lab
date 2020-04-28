@@ -1,10 +1,9 @@
 [servidores_web]
-www ansible_ssh_host=192.168.1.153
+www ansible_ssh_host=192.168.8.48
 
 [servidores_bd]
-mysql ansible_ssh_host=192.168.1.186
+mysql ansible_ssh_host=192.168.8.47
 
 [servidores:children]
 servidores_web
 servidores_bd
-

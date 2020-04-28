@@ -1,0 +1,8 @@
+-----------------------------------
+	Bem vindo!
+
+IP="ansible_all_ipv4_addresses"
+
+DIST="ansible_distribution"
+"ansible_distribution_major_version"
+"ansible_os_family"

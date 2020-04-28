@@ -19,4 +19,8 @@
 # Copia de arquivos do ansible master para algum host de destino
 - name: Copiando arquivo de backup
   copy: src=etc.zip dest=/tmp/etc.zip           # Esse modulo de cópia automaticamente ele busca dentro do diretorio files e envia uma copia do arquivo para host
+
+# Copiando um arquivo template
+- name: Adicionando arquivo motd
+  template: src=motd dest=/etc/motd force=yes owner=root group=root
 ...

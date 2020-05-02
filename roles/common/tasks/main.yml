@@ -14,11 +14,11 @@
 
 # Configuracao de timezone
 - name: Configurando timezone
-  file: src=/usr/share/zoneinfo/America/Sao_Paulo dest=/etc/localtime state=link force=yes
+  file: src=/usr/share/zoneinfo/America/Sao_Paulo dest=/etc/localtime state=link force=yes    # Modulo file copia exatamente o arquivo local para o host de destino diferente do modulo copy
 
 # Copia de arquivos do ansible master para algum host de destino
 - name: Copiando arquivo de backup
-  copy: src=etc.zip dest=/tmp/etc.zip           # Esse modulo de cópia automaticamente ele busca dentro do diretorio files e envia uma copia do arquivo para host
+  copy: src=etc.zip dest=/tmp/etc.zip    # Esse modulo de cópia automaticamente ele busca dentro do diretorio files e envia uma copia do arquivo para host
 
 # Copiando um arquivo template
 - name: Adicionando arquivo motd

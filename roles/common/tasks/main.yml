@@ -22,5 +22,12 @@
 
 # Copiando um arquivo template
 - name: Adicionando arquivo motd
-  template: src=motd dest=/etc/motd force=yes owner=root group=root
+  template: src=motd dest=/etc/motd force=yes owner=root group=root   # Basicamente a mesma funcionalidade do modulo file, porem dinamicamente
+
+# Instalacao do Nginx
+- name: Instalacao do nginx
+  yum: name=nginx state=latest
+  notify: restart nginx              # Chama o main,yml dentro Handler para iniciar/habilitar no sistema
+  notify: enable nginx on boot       # Chama o main,yml dentro Handler para iniciar/habilitar no sistema
+
 ...

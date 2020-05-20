@@ -1,15 +1,8 @@
 ---
-- name: restart nginx        # Nome que foi mencionado no modulo notify em tasks para o servico nginx
+- name: Restart SSH
   systemd:
-    name: nginx
+    name: sshd
     state: restarted
-    enabled: yes
-    daemon_reload: yes
-
-- name: enable nginx on boot 
-  systemd:
-    name: nginx
-    state: started
     enabled: yes
     daemon_reload: yes
 ...

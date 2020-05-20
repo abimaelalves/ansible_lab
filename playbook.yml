@@ -1,4 +1,6 @@
-- name: Default Playbook -  start Deploy
-  hosts: www
+---
+- name: Playbook final - Executando o Laboratorio Final do Treinamento Ansible
+  hosts: all
   roles:
     - common
+...

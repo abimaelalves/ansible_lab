@@ -1,7 +1,10 @@
-==============================================================================
-		    Servidor Web
+=========================================
+	    Treinamento Ansible
 
-HOSTNAME.: "{{ ansible_fqdn }}"
-ENDERECOIP.: "{{ ansible_all_ipv4_addresses }}"
-DIST.: "{{ ansible_distribution }}" - "{{ ansible_distribution_version }}"
-==============================================================================
+Host: "{{ ansible_hostname }}"
+IP Address: "{{ ansible_default_ipv4 }}"
+Distribuicao: "{{ ansible_distribution }} {{ ansible_distribution_version }}"
+
+=========================================
+
+
